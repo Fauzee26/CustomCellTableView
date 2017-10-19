@@ -19,12 +19,11 @@ class CustomCellTableViewController: UITableViewController {
 
         override func viewDidLoad() {
         super.viewDidLoad()
+            
+            //setting height table view
+            tableView.estimatedRowHeight = 650.0
+            tableView.rowHeight = UITableViewAutomaticDimension
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
     override func didReceiveMemoryWarning() {
@@ -36,23 +35,33 @@ class CustomCellTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return judulBerita.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cellBerita", for: indexPath) as! BeritaTableViewCell
 
         // Configure the cell...
 
+        cell.labelKategori.text = category[indexPath.row]
+        cell.judulBerita.text = judulBerita[indexPath.row]
+        cell.tglBerita.text = tglData[indexPath.row]
+        cell.isiBerita.text = isiBerita[indexPath.row]
+
+        
+//        let dataImage :UIImage = UIImage(named: gambarBerita[indexPath.row])!
+//        cell.imgGambar.image = dataImage
+
+
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.

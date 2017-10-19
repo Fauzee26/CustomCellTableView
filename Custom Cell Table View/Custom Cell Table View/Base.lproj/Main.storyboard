@@ -5,9 +5,15 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Helvetica.ttc">
+            <string>Helvetica-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Custom Cell Table View Controller-->
         <scene sceneID="UWm-Og-6dV">
@@ -18,61 +24,86 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellBerita" rowHeight="279" id="upc-qB-PEc" customClass="BeritaTableViewCell" customModule="Custom_Cell_Table_View" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="279"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellBerita" rowHeight="349" id="upc-qB-PEc" customClass="BeritaTableViewCell" customModule="Custom_Cell_Table_View" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="349"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="upc-qB-PEc" id="cjH-XX-0Ju">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="278.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="348.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="kcK-DZ-Ymc">
-                                            <rect key="frame" x="8" y="6.5" width="359" height="265.5"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="download" translatesAutoresizingMaskIntoConstraints="NO" id="Lev-p6-dwb">
-                                                    <rect key="frame" x="0.0" y="0.0" width="359" height="186"/>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sejarah" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xx0-Ls-Oyg">
-                                                    <rect key="frame" x="0.0" y="186" width="359" height="19.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15 Ramadhan: Kemenangan Umat Islam" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dTd-Ez-WAL">
-                                                    <rect key="frame" x="0.0" y="205.5" width="359" height="23"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="22 Juni 2017" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Et-ql-zLe">
-                                                    <rect key="frame" x="0.0" y="228.5" width="359" height="20"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Isi Berita" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jRT-Ig-GkT">
-                                                    <rect key="frame" x="0.0" y="248.5" width="359" height="17"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="download" translatesAutoresizingMaskIntoConstraints="NO" id="Lev-p6-dwb">
+                                            <rect key="frame" x="8" y="8" width="359" height="186"/>
                                             <constraints>
-                                                <constraint firstItem="jRT-Ig-GkT" firstAttribute="top" secondItem="dTd-Ez-WAL" secondAttribute="bottom" constant="20" id="8Z3-a4-szR"/>
-                                                <constraint firstAttribute="bottom" secondItem="7Et-ql-zLe" secondAttribute="bottom" constant="17" id="HJm-Uu-k6H"/>
+                                                <constraint firstAttribute="width" constant="359" id="5T2-ci-Hih"/>
+                                                <constraint firstAttribute="width" secondItem="Lev-p6-dwb" secondAttribute="height" multiplier="359:186" id="BAh-dd-Hir"/>
+                                                <constraint firstAttribute="height" constant="186" id="NZc-OH-FbK"/>
                                             </constraints>
-                                        </stackView>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sejarah" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fym-HW-C2O">
+                                            <rect key="frame" x="8" y="197" width="48.5" height="17"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="17" id="6AE-Pp-Au1"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Q &amp; A: Apa Sehat Membatasi Kelahiran" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jam-uZ-ObP">
+                                            <rect key="frame" x="11" y="215" width="356" height="20"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="20" id="0j8-5P-peS"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2 Juni 2017" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eRu-d7-oKa">
+                                            <rect key="frame" x="8" y="235" width="87.5" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="gPc-im-k8M"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Isi Berita" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QLd-Wm-fad">
+                                            <rect key="frame" x="8" y="264" width="359" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="cPB-cb-mzA"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="kcK-DZ-Ymc" firstAttribute="leading" secondItem="cjH-XX-0Ju" secondAttribute="leadingMargin" id="Qwm-tR-fIU"/>
-                                        <constraint firstItem="kcK-DZ-Ymc" firstAttribute="centerY" secondItem="cjH-XX-0Ju" secondAttribute="centerY" id="oU0-1k-r3u"/>
+                                        <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="eRu-d7-oKa" secondAttribute="trailing" id="00m-p3-iiY"/>
+                                        <constraint firstItem="eRu-d7-oKa" firstAttribute="top" secondItem="Jam-uZ-ObP" secondAttribute="bottom" id="9Jk-0C-hUn"/>
+                                        <constraint firstItem="fym-HW-C2O" firstAttribute="top" secondItem="Lev-p6-dwb" secondAttribute="bottom" constant="3" id="9ZM-wi-Uza"/>
+                                        <constraint firstItem="QLd-Wm-fad" firstAttribute="leading" secondItem="cjH-XX-0Ju" secondAttribute="leadingMargin" id="AcM-Ue-UC6"/>
+                                        <constraint firstItem="eRu-d7-oKa" firstAttribute="leading" secondItem="cjH-XX-0Ju" secondAttribute="leadingMargin" id="BVp-6l-bKU"/>
+                                        <constraint firstItem="Jam-uZ-ObP" firstAttribute="leading" secondItem="cjH-XX-0Ju" secondAttribute="leadingMargin" constant="3" id="FsT-H9-Rgk"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="QLd-Wm-fad" secondAttribute="bottom" constant="55.5" id="OCJ-RS-Q3c"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="QLd-Wm-fad" secondAttribute="trailing" id="VrP-kj-RY7"/>
+                                        <constraint firstItem="Lev-p6-dwb" firstAttribute="leading" secondItem="cjH-XX-0Ju" secondAttribute="leadingMargin" id="WoG-bR-gDs"/>
+                                        <constraint firstItem="Jam-uZ-ObP" firstAttribute="top" secondItem="fym-HW-C2O" secondAttribute="bottom" constant="1" id="bdQ-tz-pa5"/>
+                                        <constraint firstItem="Jam-uZ-ObP" firstAttribute="top" secondItem="fym-HW-C2O" secondAttribute="bottom" constant="1" id="dVY-Rn-AHM"/>
+                                        <constraint firstItem="eRu-d7-oKa" firstAttribute="top" secondItem="Jam-uZ-ObP" secondAttribute="bottom" id="dZY-mZ-Vxd"/>
+                                        <constraint firstItem="Lev-p6-dwb" firstAttribute="trailing" secondItem="cjH-XX-0Ju" secondAttribute="trailingMargin" id="eg4-cN-TYJ"/>
+                                        <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="fym-HW-C2O" secondAttribute="trailing" id="iTD-w4-yU7"/>
+                                        <constraint firstItem="QLd-Wm-fad" firstAttribute="top" secondItem="eRu-d7-oKa" secondAttribute="bottom" constant="8" id="mn1-ke-5ko"/>
+                                        <constraint firstItem="fym-HW-C2O" firstAttribute="top" secondItem="Lev-p6-dwb" secondAttribute="bottom" constant="3" id="oh2-0p-5D0"/>
+                                        <constraint firstItem="Lev-p6-dwb" firstAttribute="top" secondItem="cjH-XX-0Ju" secondAttribute="topMargin" id="qNE-v6-Jq2"/>
+                                        <constraint firstItem="Jam-uZ-ObP" firstAttribute="trailing" secondItem="cjH-XX-0Ju" secondAttribute="trailingMargin" id="uRa-8F-fzT"/>
+                                        <constraint firstItem="fym-HW-C2O" firstAttribute="leading" secondItem="cjH-XX-0Ju" secondAttribute="leadingMargin" id="vvT-FM-TEc"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="imgGambar" destination="Lev-p6-dwb" id="VCW-72-XcS"/>
-                                    <outlet property="isiBerita" destination="jRT-Ig-GkT" id="JJG-YP-H2q"/>
-                                    <outlet property="judulBerita" destination="dTd-Ez-WAL" id="1av-kI-m6b"/>
-                                    <outlet property="labelKategori" destination="xx0-Ls-Oyg" id="QHf-kq-mD8"/>
-                                    <outlet property="tglBerita" destination="7Et-ql-zLe" id="ydP-uq-cTB"/>
+                                    <outlet property="isiBerita" destination="QLd-Wm-fad" id="OLt-60-6GL"/>
+                                    <outlet property="judulBerita" destination="Jam-uZ-ObP" id="VoY-dK-amT"/>
+                                    <outlet property="labelKategori" destination="fym-HW-C2O" id="GaG-Rj-rel"/>
+                                    <outlet property="tglBerita" destination="eRu-d7-oKa" id="G7g-Na-iBd"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

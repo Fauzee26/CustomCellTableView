@@ -14,8 +14,9 @@ class BeritaTableViewCell: UITableViewCell {
     @IBOutlet weak var labelKategori: UILabel!
     @IBOutlet weak var imgGambar: UIImageView!
     @IBOutlet weak var judulBerita: UILabel!
-    @IBOutlet weak var tglBerita: UILabel!
     @IBOutlet weak var isiBerita: UILabel!
+    @IBOutlet weak var tglBerita: UILabel!
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
